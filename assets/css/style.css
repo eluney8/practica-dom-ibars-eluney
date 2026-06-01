@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    border-style:inset;
+    border-color: rgb(8, 138, 219);
+    border-width: 20px;
+}
