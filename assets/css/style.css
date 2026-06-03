@@ -8,3 +8,12 @@
     border-color: rgb(8, 138, 219);
     border-width: 20px;
 }
+
+#agregarpersonaje{
+    border-radius: 20px;
+}
+
+#borde-formulario{
+    border-style: solid;
+    border-color: blue;
+}
