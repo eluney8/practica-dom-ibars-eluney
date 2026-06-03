@@ -71,7 +71,18 @@ cardContainer.addEventListener("click", (e) => {
     listaPersonajes = listaPersonajes.filter((personaje) => {
       return personaje.id !== idPersonaje;
     });
-   mostrarPersonajes(listaPersonajes);
-
+    mostrarPersonajes(listaPersonajes);
   }
+});
+
+const formBuscar = document.querySelector("#formBuscar");
+const inputBuscar = document.querySelector("#inputBuscar");
+
+formBuscar.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const nombreBuscar = inputBuscar.value.toLowerCase();
+  const personajesFiltrados = listaPersonajes.filter((p) =>
+    p.nombre.toLowerCase().includes(nombreBuscar)
+  ); 
+  mostrarPersonajes(personajesFiltrados);
 });
