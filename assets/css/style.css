@@ -13,7 +13,6 @@
     border-radius: 20px;
 }
 
-#borde-formulario{
-    border-style: solid;
-    border-color: blue;
+html, body {
+    height: 100%;
 }

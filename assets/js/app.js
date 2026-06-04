@@ -82,7 +82,26 @@ formBuscar.addEventListener("submit", (e) => {
   e.preventDefault();
   const nombreBuscar = inputBuscar.value.toLowerCase();
   const personajesFiltrados = listaPersonajes.filter((p) =>
-    p.nombre.toLowerCase().includes(nombreBuscar)
-  ); 
+    p.nombre.toLowerCase().includes(nombreBuscar),
+  );
   mostrarPersonajes(personajesFiltrados);
 });
+
+const nombrePersonaje = document.querySelector("#nombrePersonaje");
+const url = document.querySelector("#url");
+const formAgregar = document.querySelector("#formAgregar");
+
+formAgregar.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const personajeNuevo = {
+    id: Date.now(),
+    nombre: nombrePersonaje.value,
+    imagen: url.value,
+  };
+  listaPersonajes.push(personajeNuevo);
+  mostrarPersonajes(listaPersonajes);
+  formAgregar.reset();
+});
+
+
+// https://static1.srcdn.com/wordpress/wp-content/uploads/2024/04/batman-stands-in-detective-comic-art-by-jason-fabok.jpg
